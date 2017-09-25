@@ -2,3 +2,7 @@ texhyphj/ant-build/output
 texhyphj/bin
 texhyphj/target
 .settings
+/.idea/
+/texhyphj/out/
+*.iml
+/.gradle/
