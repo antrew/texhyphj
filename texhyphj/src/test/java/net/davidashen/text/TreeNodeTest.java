@@ -222,12 +222,12 @@ public class TreeNodeTest {
 
 		//Expected: ('z' [0,0] ('a' [0,0,1]) )
 		List list = root.toList();
-		assertThat("z rule", list.head(), allOf(instanceOf(Character.class), equalTo('z')));
+		assertThat("z rule",(Character) list.head(), allOf(instanceOf(Character.class), equalTo('z')));
 		assertArrayEquals("z rule", new int[]{0,0}, (int[])list.longTail().head());
 		assertThat("z list length", list.length(), equalTo(3));
 		
 		List za = (List)list.last();
-		assertThat("za rule", za.head(), allOf(instanceOf(Character.class), equalTo('a')));
+		assertThat("za rule", (Character) za.head(),  allOf(instanceOf(Character.class), equalTo('a')));
 		assertArrayEquals(new int[]{0,0,1}, (int[])za.longTail().head());
 		assertThat("za list length", za.length(), equalTo(2));
 	}
